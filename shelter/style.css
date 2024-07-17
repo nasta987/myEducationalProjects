@@ -41,3 +41,77 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+}
+
+.container-main {
+  max-width: 1280px;
+	height: 5000px;
+  margin: 0 auto;
+	padding: 0 40px;
+  border: 1px solid red;
+}
+
+/* header style start */
+
+.header {
+	margin-top: 30px;
+	background: 
+	linear-gradient(0deg, rgba(33, 31, 32, 0.5), rgba(33, 31, 32, 0.5)), 
+	radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
+}
+.container-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+	width: 100%;
+}
+.header-logo {
+  display: flex;
+  flex-direction: column;
+	max-width: 184px;
+	height: 60px;
+}
+.logo-title {
+	width: 184px;
+	height: 35px;
+}
+.name-adress-title {
+	width: 179px;
+	height: 15px;
+	padding-top: 10px;
+}
+.header-nav {
+  display: flex;
+  flex-wrap: wrap; 
+	width: 443px;
+	height: 27px;
+}
+.nav-list {
+  display: flex;
+  flex-direction: row;
+  gap: 35px;
+	flex-wrap: wrap; 
+	}
+.nav-link {
+  color: #cdcdcd;
+  text-decoration: none;
+}
+.nav-link:active {
+  color: #fafafa;
+  border-bottom: solid #f1cdb3;
+  width: 114px;
+  height: 3px;
+}
+
+/* header style end*/
