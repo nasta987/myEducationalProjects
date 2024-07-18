@@ -58,23 +58,20 @@ body {
   max-width: 1280px;
 	height: 5000px;
   margin: 0 auto;
-	padding: 0 40px;
-  border: 1px solid red;
 }
 
 /* header style start */
 
 .header {
 	margin-top: 30px;
-	background: 
-	linear-gradient(0deg, rgba(33, 31, 32, 0.5), rgba(33, 31, 32, 0.5)), 
-	radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
+	
 }
 .container-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 	width: 100%;
+	padding: 0 40px;
 }
 .header-logo {
   display: flex;
@@ -115,3 +112,19 @@ body {
 }
 
 /* header style end*/
+
+/* start-page style start*/
+
+.main {
+	width: 100%;
+}
+
+.start-page {
+	width: 100%;
+	height: 100vh;
+	background: 
+	linear-gradient(0deg, rgba(33, 31, 32, 0.5), rgba(33, 31, 32, 0.5)), 
+	radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
+}
+
+/* start-page style end*/
