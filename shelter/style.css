@@ -144,7 +144,6 @@ body {
 	gap: 42px;
 	flex-wrap: wrap;
   top: -45px;
-	
 }
 .img-puppy {
 	display: block;
@@ -178,6 +177,8 @@ letter-spacing: 0.06em;
 text-align: left;
 color: #292929;
 background-color: #F1CDB3;
+border: none; 
+outline: none; 
 }
 .make-friend:hover {
   background-color: #e2a980;
@@ -225,5 +226,143 @@ color:#545454;
 /* section about style end*/
 
 /* section our-friends start*/
-
+.container-our-friends-row {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: stretch;
+	height: 877px;
+	border: 1px solid red;
+	padding: 0 40px;
+	background-color: #FFFFFF;
+}
+.container-our-friends-column {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items:center;
+	gap:60px;
+	text-align: center;
+}
+.container-article-pet-description {
+	display: flex;
+	justify-content: space-around;
+	align-items:center;
+	text-align: center;
+	gap: 60px;
+}
+.pet-description {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap:30px;
+	width: 270px;
+	height: 435px;
+	border: 1px solid red;
+}
+.h3-our-friends {
+width: 400px;
+height: 90px;
+font-family: Georgia;
+font-size: 35px;
+font-weight: 400;
+line-height: 45.5px;
+letter-spacing: 0.06em;
+text-align: center;
+color: #545454;
+}
+.screen-pet-our-friends img {
+width: 270px;
+height: 270px;
+}
+.name-pet {
+font-family: Georgia;
+font-size: 20px;
+font-weight: 400;
+line-height: 22.72px;
+letter-spacing: 0.06em;
+text-align: center;
+}
+.arrow, .button-pet-description {
+  align-self: center; 
+}
+.button-pet-description {
+width: 187px;
+height: 52px;
+padding: 15px 45px 15px 45px;
+gap: 10px;
+border-radius: 100px;
+border: 2px 0px 0px 0px;
+opacity: 0px;
+font-family: Georgia;
+font-size: 17px;
+font-weight: 400;
+line-height: 22.1px;
+letter-spacing: 0.06em;
+text-align: left;
+border:2px solid #F1CDB3;
+white-space: nowrap;
+background-color: #FFFFFF;
+}
+.button-pet-description:hover {
+  background-color: #fcf8f8;
+}
+.button-pet-description:active {
+  background-color: #FFFFFF;
+	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2); 
+  transform: translateY(2px); 
+}
+.get-to-know {
+width: 261px;
+height: 52px;
+top: 645px;
+left: 470px;
+padding: 15px 45px 15px 45px;
+gap: 10px;
+border-radius: 100px;
+opacity: 0px;
+font-family: Georgia;
+font-size: 17px;
+font-weight: 400;
+line-height: 22.1px;
+letter-spacing: 0.06em;
+text-align: left;
+white-space: nowrap;
+background-color: #F1CDB3;
+border: none; 
+outline: none; 
+}
+.get-to-know:hover {
+  background-color: #e2a980;
+}
+.get-to-know:active {
+  background-color: #d99670;
+	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2); 
+  transform: translateY(2px); 
+}
+.arrow {
+display: flex;
+justify-content: center;
+align-items: center;
+width: 52px;
+height: 52px;
+top: 192px;
+padding: 23px 19px 23px 19px;
+gap: 0px;
+border-radius: 100px;
+border: 2px 0px 0px 0px;
+opacity: 0px;
+border:2px solid #F1CDB3;
+white-space: nowrap;
+background-color: #FFFFFF;
+}
+.arrow:hover {
+  background-color: #fcf8f8;
+}
+.arrow:active {
+  background-color: #FFFFFF;
+	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2); 
+  transform: translateY(2px); 
+}
+	
 /* section our-friends end*/
