@@ -232,9 +232,8 @@ color:#545454;
 	justify-content: space-between;
 	align-items: stretch;
 	height: 877px;
-	border: 1px solid red;
 	padding: 0 40px;
-	background-color: #FFFFFF;
+	background-color: #F6F6F6;
 }
 .container-our-friends-column {
 	display: flex;
@@ -258,7 +257,22 @@ color:#545454;
 	gap:30px;
 	width: 270px;
 	height: 435px;
-	border: 1px solid red;
+	overflow: hidden;
+	background-color: #FAFAFA;
+	border: 2px solid transparent;
+}
+.pet-description:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	background-color: #e2a980;
+}
+@keyframes border-anim {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
 }
 .h3-our-friends {
 width: 400px;
@@ -302,7 +316,7 @@ letter-spacing: 0.06em;
 text-align: left;
 border:2px solid #F1CDB3;
 white-space: nowrap;
-background-color: #FFFFFF;
+background-color: #FAFAFA;
 }
 .button-pet-description:hover {
   background-color: #fcf8f8;
@@ -354,10 +368,11 @@ border: 2px 0px 0px 0px;
 opacity: 0px;
 border:2px solid #F1CDB3;
 white-space: nowrap;
-background-color: #FFFFFF;
+background-color: #F6F6F6;
 }
 .arrow:hover {
   background-color: #fcf8f8;
+	border: 2px solid #e2a980;
 }
 .arrow:active {
   background-color: #FFFFFF;
