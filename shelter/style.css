@@ -387,6 +387,7 @@ background-color: #F6F6F6;
   flex-direction: column;
   align-items: center;
 	height: 611px;
+	background-color: #FFFFFF;
 }
 .container-help {
 	display: flex;
@@ -435,6 +436,87 @@ background-color: #F6F6F6;
 		align-items: center;
 		gap:30px;
 	}
-	
-
 	/* section help end*/
+
+	/* in-addition help start*/
+	.container-in-addition-main {
+		display: flex;
+		justify-content: center;
+		align-items:center;
+		height: 462px;
+		background-color: #F6F6F6;
+	}
+	.container-in-addition {
+		display: flex;
+		width: 915px;
+		height: 282px;
+		justify-content: center;
+	}
+	.dog-in-addition img {
+		width: 505px;
+		height: 261px;
+	}
+	.h3-in-addition {
+	 width: 300px;
+	 height: 90px;
+   font-family: Georgia;
+   font-size: 35px;
+   font-weight: 400;
+   line-height: 45.5px;
+   letter-spacing: 0.06em;
+   text-align: left;
+	 color: #545454;
+	}
+	.h5-in-addition {
+  font-family: Georgia;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 16.5px;
+  letter-spacing: 0.06em;
+  text-align: left;
+	color: #545454;
+	}
+	.number-credit-card img {
+		width: 30px;
+		height: 23px;
+	}
+	.info-card {
+	font-family: Arial;
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: left;
+	color: #B2B2B2;
+	}
+	.info-in-addition {
+	display: flex;
+	flex-direction: column;
+	gap:20px;
+	width: 380px;
+	height: 282px;
+	}
+	.credit-card {
+	display: flex;
+	flex-direction: column;
+	gap:20px;
+	}
+	.line-credit-card {
+	display: flex;
+	gap:10px;
+	padding-left: 10px;
+	width: 349px;
+  height: 43px;
+  top: 147px;
+  padding: 10px 15px 10px 15px;
+  border-radius: 9px;
+	background-color: #F1CDB3;
+	}
+	.number-credit-card {
+		text-decoration: none;
+		color: inherit;
+	}
+	.line-credit-card:hover {
+		background-color: #e2a980;
+	}
+	/* in-addition help end*/
