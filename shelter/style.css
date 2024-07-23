@@ -108,6 +108,7 @@ body {
   color: #cdcdcd;
   text-decoration: none;
 }
+.nav-list-item.active a,
 .nav-link:active {
   color: #fafafa;
   border-bottom: solid #f1cdb3;
@@ -179,6 +180,7 @@ color: #292929;
 background-color: #F1CDB3;
 border: none; 
 outline: none; 
+transition: 0.6s;
 }
 .make-friend:hover {
   background-color: #e2a980;
@@ -260,20 +262,14 @@ color:#545454;
 	overflow: hidden;
 	background-color: #FAFAFA;
 	border: 2px solid transparent;
+	transition: 1.4s;
 }
 .pet-description:hover {
   transform: scale(1.05);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 	background-color: #e2a980;
 }
-@keyframes border-anim {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(100%);
-  }
-}
+
 .h3-our-friends {
 width: 400px;
 height: 90px;
@@ -344,7 +340,8 @@ text-align: left;
 white-space: nowrap;
 background-color: #F1CDB3;
 border: none; 
-outline: none; 
+outline: none;
+transition: 0.6s;
 }
 .get-to-know:hover {
   background-color: #e2a980;
@@ -369,6 +366,7 @@ opacity: 0px;
 border:2px solid #F1CDB3;
 white-space: nowrap;
 background-color: #F6F6F6;
+transition: 0.6s;
 }
 .arrow:hover {
   background-color: #fcf8f8;
@@ -511,6 +509,7 @@ background-color: #F6F6F6;
   padding: 10px 15px 10px 15px;
   border-radius: 9px;
 	background-color: #F1CDB3;
+	transition: 0.8s;
 	}
 	.number-credit-card {
 		text-decoration: none;
@@ -520,3 +519,66 @@ background-color: #F6F6F6;
 		background-color: #e2a980;
 	}
 	/* in-addition help end*/
+
+	/* footer start*/
+	.footer {
+		display: flex;
+		justify-content: center;
+		width: 1280px;
+		height: 350px;
+		margin: 0 auto;
+		background: linear-gradient(0deg, rgba(33, 31, 32, 0.5), rgba(33, 31, 32, 0.5)),
+		radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
+	}
+	.container-footer {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 160px;
+		width: 1200px;
+		height: 310px;
+		padding-top: 56px;
+	}
+	.footer-dog {
+		padding-top: 20px;
+	}
+	.footer-dog-img img {
+		width: 300px;
+		height: 310px;
+	}
+	.h3-title-questions, .h3-title-visit {
+   font-family: Georgia;
+   font-size: 35px;
+   font-weight: 400;
+   line-height: 45.5px;
+   letter-spacing: 0.06em;
+   text-align: left;
+	 color: #FFFFFF;
+	}
+	.line-email, .line-phone, .line-first-adress, .line-second-adress {
+	 display: flex;
+   align-items: center; 
+   gap: 16px;
+	 font-family: Georgia;
+	 font-size: 20px;
+	 font-weight: 400;
+	 line-height: 23px;
+	 letter-spacing: 0.06em;
+	 text-align: left;
+	 color: #F1CDB3;
+	}
+	a {
+		text-decoration: none;
+		color: inherit;
+	}
+	.for-questions, .visit-contacts {
+		display: flex;
+		flex-direction: column;
+	}
+	.for-questions {
+		gap:40px;
+	}
+	.visit-contacts {
+		gap:33px;
+	}
+	/* footer end*/
