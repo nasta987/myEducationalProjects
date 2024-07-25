@@ -115,6 +115,18 @@ body {
   background: linear-gradient(0deg, rgba(33, 31, 32, 0.5), rgba(33, 31, 32, 0.5)),
               radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
 }
+.our-friends .nav-link {
+	color: #545454;
+}
+.header-nav .our-friends .nav-list-item.active-our-friend .nav-link, .nav-list-item our-friend:active {
+	color: #292929;
+	border-bottom: solid #f1cdb3;
+}
+.header-nav .nav-list.our-friends .nav-list-item.our-friend .nav-link:hover,
+.header-nav .nav-list.our-friends .nav-list-item.our-friend .nav-link:active {
+    color: #292929;
+		border-bottom: solid #f1cdb3; 
+}
 /* header style end*/
 
 /* start-page style start*/
@@ -536,7 +548,7 @@ transition: 0.6s;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		gap: 100px;
+		gap: 157px;
 		width: 1200px;
 		height: 310px;
 		padding-top: 65px;
@@ -558,7 +570,9 @@ transition: 0.6s;
 	 color: #FFFFFF;
 	}
 	.h3-title-visit {
-    transform: translateY(-6px);
+		width: 278px;
+		transform: translateY(-15px);
+
 }
 	.line-email, .line-phone, .line-first-adress, .line-second-adress {
 	 display: flex;
@@ -576,6 +590,9 @@ transition: 0.6s;
 		text-decoration: none;
 		color: inherit;
 	}
+	.line-first-adress, .line-second-adress {
+		transform: translateY(-5px);
+	}
 	.for-questions, .visit-contacts {
 		display: flex;
 		flex-direction: column;
@@ -586,6 +603,56 @@ transition: 0.6s;
 	}
 	.visit-contacts {
 		gap:27px;
-		transform: translate(-6px, -10px);
+		transform: translateY(-10px, -8px);
+		transform: translateX(-10px);
 	}
 	/* footer end*/
+
+	/* friends start*/
+	.friends {
+		width: 1280px;
+		height: 1370px;
+		background-color: #F6F6F6;
+	}
+	.container-friends {
+		display: flex;
+		flex-direction: column;
+		gap: 45px;
+		justify-content: space-around;
+		align-items: center;
+		width: 1200px;
+		height: 1162px;
+		margin: 0 auto;
+		padding-top: 100px;
+	}
+	.container-article-pet-description-friends {
+		display: flex;
+		flex-direction: row;
+		gap:40px;
+		row-gap: 40px;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		width: 1200px;
+		height: 930px;
+		transform: translateY(25px);
+	}
+	.container-article-pet-description-friends > .pet-description:nth-child(n + 5) {
+		transform: translateY(-15px); 
+}
+	.container-buttons-arrow {
+		display: flex;
+		flex-direction: row;
+		gap: 20px;
+		padding-top: 60px;
+	}
+	.activ-button {
+		background-color: #F1CDB3;
+	}
+	.arrow:disabled {
+    background-color: #ebebeb; 
+    color: #CDCDCD; 
+    cursor: not-allowed;
+		border: 0px;
+	}
+
+	/* friends end*/
