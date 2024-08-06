@@ -212,8 +212,8 @@ transition: 0.6s;
 	background-color: #FFFFFF;
 }
 .about-img img {
-	width: 100%;
-	height: 100%;
+	width: 300px;
+	height: 408px;
 }
 .h3-about {
 width: 370px;
@@ -667,3 +667,269 @@ transition: 0.6s;
 	}
 
 	/* friends end*/
+
+	/* media 768 footer start*/
+	@media screen and (max-width: 768px) {
+		.nav-list {
+			gap: 30px;
+			flex-wrap: nowrap;
+			
+		}
+		.container-header {
+			gap: 81px;
+			padding-top:1.60%;
+			padding-left: 4%;
+		}
+		.header-nav {
+			width: 65%;
+		}
+		.logo-title {
+			padding-top: 7px;
+		}
+	}
+	/* media 768 footer end*/
+	
+/* media 768 start-page start*/
+@media screen and (max-width: 768px) {
+	.start-page {
+		height: auto;
+	}
+	.container-not-only {
+		flex-direction: column;
+		padding: 0 20.65%;
+		padding-top: 7.2%;
+	}
+	.not-only {
+		flex-direction: column;
+		width: 100%;
+		gap: 42px;
+		top: 5px;
+	}
+	.img-puppy {
+		display: block;
+		justify-content: flex-end;
+	}
+	.start-screen-puppy img {
+	width: 698px;
+	height: 692px;
+	padding-top: 14%;
+	padding-left: 20%;
+	}
+	.make-friend {
+	position: relative;
+	left: 28%;
+	width: 46%;
+	}
+}
+/* media 768 start-page end*/
+
+/* media 768 about start*/
+@media screen and (max-width: 768px) {
+.container-about {
+	flex-direction: column;
+	gap: 40px;
+	padding-top: 10.8%;
+	height: auto;
+	padding-left: 2.5%;
+	padding-bottom: 12.8%;
+}
+.about-img img {
+	width: 100%;
+	height: 100%;
+	padding-left: 1.5%;
+}
+}
+/* media 768 about end*/
+
+/* media 768 our friend start*/
+@media screen and (max-width: 768px) {
+	.container-our-friends-row {
+		height: auto;
+		padding: 0 3.2%;
+		padding-top: 9%;
+		gap: 15px;
+		padding-bottom: 6.3%;
+	}
+	.container-our-friends-column {
+		gap:60px;
+		padding-bottom: 7.6%;
+		text-align: center;
+	}
+	.container-article-pet-description {
+		gap: 43px;
+	}
+	.h3-our-friends {
+	width: 100%;
+	height: 100%;
+	}
+	.woody {
+		display: none;
+	}
+	.screen-pet-our-friends img {
+	width: 270px;
+	height: 270px;
+	}
+	.arrow {
+	margin-top: -8px;
+	}
+}
+/* media 768 our friend end */
+
+/* media 768 help start */
+@media screen and (max-width: 768px) {
+	.container-help-main {
+		height: 779px;
+		
+	}
+	.container-help {
+		gap: 45px;
+		width: 92.75%;
+		height: auto;
+		padding-top: 8%;
+	}
+	.h3-help {
+    margin-left: 2%
+	}
+		.container-help-description-first-row, .container-help-description-second-row {
+			flex-direction: row;
+			padding: 0 80px;
+			gap: 60px 120px;
+			flex-wrap: wrap;
+			justify-content: flex-start;
+			align-items: center;
+		}
+		.container-help-description-second-row {
+			padding-bottom: 0;
+		}		
+		.container-help-description-first-row .help-description:nth-child(4) {
+			transform: translateX(-29px);
+		}
+		.container-help-description-first-row .help-description:nth-child(5) {
+			transform: translateX(-45px);
+		}
+		.container-help-description-second-row .help-description:first-child {
+			position: relative;
+			top: -150px; 
+			padding-left: 87%;
+		}		
+		.container-help-description-second-row .help-description:nth-child(2) {
+			position: relative;
+			top: -150px; 
+			padding-right: 87%;
+		}
+		.container-help-description-second-row .help-description:nth-child(3) {
+			position: relative;
+			top: -317px; 
+			padding-left: 37%;
+		}
+		.container-help-description-second-row .help-description:nth-child(4) {
+			position: relative;
+			top: -488px; 
+			padding-left: 80%;
+			white-space: nowrap;
+		}
+}
+/* media 768 help end */
+
+/* media 768 in-addition start */
+@media screen and (max-width: 768px) {
+	.container-in-addition-main {
+	justify-content: center;
+	align-items:center;
+	height: auto;
+}
+.container-in-addition {
+	flex-direction: column-reverse;
+	height: auto;
+	justify-content:center;
+	align-items: center;
+	padding-top: 12%;
+	padding-left: 3%;
+	padding-bottom: 4%;
+}
+.dog-in-addition {
+	padding-bottom: 12%;
+	transform: translateY(22px);
+}
+.dog-in-addition img {
+	width: 100%;
+	height: 100%;
+}
+}
+/* media 768 in-addition end */
+
+/* media 768 in-footer start */
+@media screen and (max-width: 768px) {
+	.footer {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		height: 639px;
+		margin: 0 auto;
+		padding-bottom: 10%;
+	}
+	.container-footer {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap:55px;
+		padding-top: 30px;
+		padding-left: 10px;
+		flex-wrap: wrap;
+	}
+	.footer-dog {
+
+		transform: translateY(-15px);
+	}
+	.footer-dog-img img {
+		width: 300px;
+		height: 310px;
+	}
+	.for-questions {
+		gap:15px;
+		transform: translateY(-10px);
+		transform: translateX(-35px);
+		width: 278px;
+	}
+	.visit-contacts {
+		transform: translateX(-10px);
+		gap:15px;
+
+		width: 270px;
+	}
+}
+/* media 768 in-footer end */
+
+/* media 768 friend start */
+@media screen and (max-width: 768px) {
+.container-friends {
+	display: flex;
+	flex-direction: column;
+	gap: 45px;
+	justify-content: space-around;
+	align-items: center;
+	margin: 0 auto;
+	padding-top: 100px;
+
+	
+}
+.container-article-pet-description-friends {
+	display: flex;
+	flex-direction: row;
+	gap:40px;
+	row-gap: 40px;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+}
+.container-article-pet-description-friends > .pet-description:nth-child(n + 5) {
+	transform: translateY(-15px); 
+}
+.container-buttons-arrow {
+	display: flex;
+	flex-direction: row;
+	gap: 20px;
+	padding-top: 60px;
+}
+
+}
+/* media 768 friend end */
