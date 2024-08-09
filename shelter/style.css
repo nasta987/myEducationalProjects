@@ -51,6 +51,7 @@ html {
 }
 
 body {
+	overflow-x: hidden;
   font-family: Arial;
   font-size: 15px;
   font-weight: 400;
@@ -198,8 +199,8 @@ body {
 	justify-content: flex-end;
 }
 .start-screen-puppy img {
-width: 100%;
-height: 100%;
+width: 698px;
+height: 728px;
 }
 h1 {
 	width: 72.22%;
@@ -684,7 +685,6 @@ transition: 0.6s;
 		height: 1164px;
 		margin: 0 auto;
 		padding-top: 100px;
-		
 	}
 	.container-article-pet-description-friends {
 		display: flex;
@@ -716,11 +716,10 @@ transition: 0.6s;
     cursor: not-allowed;
 		border: 0px;
 	}
-
 	/* friends end*/
 
-	/* media 768 header start*/
-	@media screen and (max-width: 768px) {
+	/* media 1165px header start*/
+	@media screen and (max-width: 1165px) {
 		.nav-list {
 			gap: 30px;
 			flex-wrap: nowrap;
@@ -738,10 +737,10 @@ transition: 0.6s;
 			padding-top: 7px;
 		}
 	}
-	/* media 768 header end*/
+	/* media 1165px header end*/
 	
-/* media 768 start-page start*/
-@media screen and (max-width: 768px) {
+/* media 1165px start-page start*/
+@media screen and (max-width: 1165px) {
 	.start-page {
 		height: auto;
 	}
@@ -772,10 +771,10 @@ transition: 0.6s;
 	width: 46%;
 	}
 }
-/* media 768 start-page end*/
+/* media 1165px start-page end*/
 
-/* media 768 about start*/
-@media screen and (max-width: 768px) {
+/* media 1165px about start*/
+@media screen and (max-width: 1165px) {
 .container-about {
 	flex-direction: column;
 	gap: 40px;
@@ -790,10 +789,10 @@ transition: 0.6s;
 	padding-left: 1.5%;
 }
 }
-/* media 768 about end*/
+/* media 1165px about end*/
 
-/* media 768 our friend start*/
-@media screen and (max-width: 768px) {
+/* media 1165px our friend start*/
+@media screen and (max-width: 1165px) {
 	.container-our-friends-row {
 		height: auto;
 		padding: 0 3.2%;
@@ -824,13 +823,12 @@ transition: 0.6s;
 	margin-top: -8px;
 	}
 }
-/* media 768 our friend end */
+/* media 1165px our friend end */
 
-/* media 768 help start */
-@media screen and (max-width: 768px) {
+/* media 1165px help start */
+@media screen and (max-width: 1165px) {
 	.container-help-main {
-		height: 779px;
-		
+		height: auto;
 	}
 	.container-help {
 		gap: 45px;
@@ -851,10 +849,10 @@ transition: 0.6s;
 			padding-top: 8%;
 		}
 }
-/* media 768 help end */
+/* media 1165p help end */
 
-/* media 768 in-addition start */
-@media screen and (max-width: 768px) {
+/* media 1165p in-addition start */
+@media screen and (max-width: 1165px) {
 	.container-in-addition-main {
 	justify-content: center;
 	align-items:center;
@@ -878,10 +876,10 @@ transition: 0.6s;
 	height: 100%;
 }
 }
-/* media 768 in-addition end */
+/* media 1165p in-addition end */
 
-/* media 768 footer start */
-@media screen and (max-width: 768px) {
+/* media 1165p footer start */
+@media screen and (max-width: 1165px) {
 	.footer {
 		display: flex;
 		justify-content: center;
@@ -919,10 +917,10 @@ transition: 0.6s;
 		width: 270px;
 	}
 }
-/* media 768 footer end */
+/* media 1165p footer end */
 
-/* media 768 friend start */
-@media screen and (max-width: 768px) {
+/* media 1165p friend start */
+@media screen and (max-width: 1165px) {
 	.friends {
 		padding: 0 15px;
 		padding-top: 6.2%;
@@ -956,7 +954,7 @@ transition: 0.6s;
 	transform: translateY(0px); 
 }
 }
-/* media 768 friend end */
+/* media 1165p friend end */
 
 @media (max-width: 759px) {
 	.header-nav {
@@ -1005,12 +1003,18 @@ transition: 0.6s;
 @media screen and (max-width: 375px) {
 	.container-header {
 		gap: 66px;
-		padding-top:1.60%;
-		padding-left: 4%;
+		padding-left: 7%;
 	}
 	.logo-title {
-		padding-top: 7px;
+		padding-top: 12%;
 	}
+	.header-logo {
+		gap: 20px;
+	}
+	.burger-menu {
+		width: 100%;
+		height: 21px;
+}
 }
 /* media 375 header end*/
 
@@ -1019,8 +1023,9 @@ transition: 0.6s;
 	.not-only {
 		justify-content: center;
 		width: 100%;
+		height: auto;
 		gap: 42px;
-		top: 5px;
+		padding-top: 25%;
 	}
 	.start-screen-puppy img {
 	width: 100%;
@@ -1037,15 +1042,19 @@ transition: 0.6s;
   text-align: center;
 	}
 	.make-friend {
-	width: 60.0%;
+	width: 70.0%;
 	height: auto;
 	gap: 10px;
+	justify-self: center;
+	transform: translate(-29px, -22px);
 	}
 	.container-not-only {
 		flex-direction: column;
 		padding: 0 20px;
-		padding-top: 7.2%;
 		width: 100%;
+	}
+	.img-puppy {
+		padding-top: 28%;
 	}
 }
 /* media 375 start-page end*/
@@ -1054,26 +1063,37 @@ transition: 0.6s;
 @media screen and (max-width: 375px) {
 	.container-about {
 		width: 100%;
+		flex-direction: column;
 		justify-content: center;
 		gap: 40px;
-		padding-top: 10.8%;
-		height: auto;
+		padding-top: 12.8%;
 		padding-bottom: 12.8%;
 		padding-left: 25px;
 		padding-right: 25px;
+		height: auto;
+	}
+	.about-img {
+		padding-top: 26%;
 	}
 	.about-img img {
 		width: 100%;
 		height: 100%;
 		padding-left: 1.5%;
+	
 	}
 	.about-text {
 		width: 100%;
 		text-align: justify;
+		padding-bottom: 10%;
 	}
 	.h3-about {
-		width: 100%;
-		text-align: center;
+   font-family: Georgia;
+   font-size: 25px;
+   font-weight: 400;
+   line-height: 32.5px;
+   letter-spacing: 0.06em;
+	 width: 100%;
+	 text-align: center;
 	}
 	}
 	/* media 375 about end*/
@@ -1082,20 +1102,19 @@ transition: 0.6s;
 @media screen and (max-width: 375px) {
 	.container-our-friends-row {
 		flex-direction: column;
-		height: auto;
+		height: auto; 
 		padding: 0 10px;
 		padding-top: 9%;
 		gap: 15px;
-		padding-bottom: 6.3%;
-	}
+		}
 	.container-our-friends-column {
 		width: 100%;
 		gap:60px;
-		padding-bottom: 7.6%;
 		text-align: center;
 	}
 	.container-article-pet-description {
 		gap: 43px;
+		transform: translateY(-22px);
 	}
 	.h3-our-friends {
 	width: 100%;
@@ -1117,11 +1136,15 @@ transition: 0.6s;
 	.arrow-container {
 		display: flex;
     justify-content: center;
-    gap: 50px; 
+    gap: 80px; 
+		transform: translateY(-52px);
 	}
 	.arrow-container .arrow {
     display: inline-flex;
   }
+	.get-to-know {
+		transform: translateY(-67px);
+	}
 }
 /* media 375 our friend end */
 
@@ -1132,17 +1155,39 @@ transition: 0.6s;
 		height: auto;
 		padding-left: 15px;
 		padding-right: 15px;
+	  transform: translateY(-42px);
+	}
+	.name-help {
+   font-family: Georgia;
+   font-size: 15px;
+   font-weight: 400;
+   line-height: 16.5px;
+   letter-spacing: 0.06em;
+   text-align: center;
+	 white-space: nowrap;
+	}
+	.screen-help img {
+width: 50px;
+height: 50px;
 	}
 	.container-help {
 		display: none;
 	}
 	.h3-help {
-    margin-left: 2%
+	 width: 80%;
+   margin-left: 2%;
+   font-family: Georgia;
+   font-size: 25px;
+   font-weight: 400;
+   line-height: 32.5px;
+   letter-spacing: 0.06em;
+   text-align: center;
 	}
 		.container-help-mobile {
 			display: grid;
 			grid-template-columns: 1fr 1fr; 
 			gap: 40px; 
+			grid-row-gap: 20px; 
 			padding-left: 15px;
 			padding-right: 15px;
 		}
@@ -1156,7 +1201,10 @@ transition: 0.6s;
 	justify-content: center;
 	align-items:center;
 	height: auto;
-	
+	position: relative; 
+	padding-left: 20px; 
+	padding-right: 20px; 
+	padding-bottom: 3%;
 }
 .container-in-addition {
 	width: 100%;
@@ -1166,8 +1214,12 @@ transition: 0.6s;
 	align-items: center;
 }
 .info-in-addition {
-	padding-right: 20px;
-	padding-left: 10px;
+	width: 100%;
+	position: relative; 
+	box-sizing: border-box;
+	top: 19px; 
+	justify-content:center;
+	align-items: center;
 }
 .dog-in-addition {
 	padding-bottom: 12%;
@@ -1180,43 +1232,136 @@ transition: 0.6s;
 .h3-in-addition {
 	width: 100%;
 	text-align: center;
+	font-family: Georgia;
+	font-size: 25px;
+	font-weight: 400;
+	line-height: 32.5px;
+	letter-spacing: 0.06em;
  }
  .h5-in-addition, .line-credit-card {
-	width: 100%;
 	text-align: center;
+	font-family: Georgia;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 24px;
+	font-family: Georgia;
+	letter-spacing: 0.06em;
+	align-self: flex-start;
+	white-space: nowrap;
  }
- .info-card {
+ .line-credit-card {
 	width: 100%;
-	text-align: justify;
  }
-}
-/* media 375 in-addition end */
+.number-credit-card {
+font-family: Georgia;
+font-size: 15px;
+font-weight: 400;
+line-height: 16.5px;
+letter-spacing: 0.06em;
+text-align: left;
+}	
+.info-card {
+	width: 100%;
+	font-family: Arial;
+font-size: 12px;
+font-style: italic;
+font-weight: 400;
+line-height: 18px;
+text-align: justify;
+ }
+	.card-img img {
+		width: 30px;
+		height: 23px;
+	}
+ }
+ /* media 375 in-addition end */
 
 /* media 375 footer start */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 375px) {
 	.footer {
 		display: flex;
 		justify-content: center;
 		width: 100%;
-		height: 100vh;
+		height: auto;
 		margin: 0 auto;
-		padding-bottom: 10%;
+		
 	}
 	.container-footer {
 		display: flex;
+		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		gap:55px;
+		gap:35px;
 		padding-top: 30px;
 		flex-wrap: wrap;
+		height: auto;
 	}
 	.footer-dog {
 		transform: translateY(-15px);
 	}
 	.footer-dog-img img {
-		width: 300px;
-		height: 310px;
+		width:260px;
+		height:269px;
 	}
-	
+	.h3-title-questions, .h3-title-visit {
+   font-family: Georgia;
+   font-size: 25px;
+   font-weight: 400;
+   line-height: 32.5px;
+   letter-spacing: 0.06em;
+   text-align: center;
+	}
+	.for-questions, .visit-contacts {
+		justify-content: center;
+		align-items: center;
+	}
+	.visit-contacts {
+		gap: 20px;
+	}
 }
 /* media 375 footer end */
+
+/* media 375 friend start */
+@media screen and (max-width: 375px) {
+
+.container-buttons-arrow {
+	width: 100%;
+	height: auto;
+	padding-top: 30px;
+	gap: 10px;
+}
+.Scarlett, .Freddie, .Sophia, .Timmy, .Charly {
+	display: none;
+}
+#friends .container-buttons-arrow .arrow {
+	display: flex;
+  justify-content: center; 
+  align-items: center; 
+	text-align: center;
+}
+.container-friends {
+	padding-top: 20%;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-bottom: 5.5%;
+}
+.container-article-pet-description-friends {
+	transform: translateY(-7.5px);
+}
+.h3-our-friends our {
+	white-space: nowrap;
+}
+}
+/* media 375 friend end */
+
+@media screen and (max-width: 320px) {
+	.container-our-friends-row {
+	max-height: 791px; 
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.container-help-main {
+		height: 779px;
+	}
+}
