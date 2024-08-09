@@ -1,3 +1,35 @@
+document.addEventListener('DOMContentLoaded', function() {
+  const burgerMenu = document.querySelector('.burger-menu');
+  const nav = document.querySelector('.header-nav');
+  const navLinks = document.querySelectorAll('.nav-link');
+  const closeMenuButton = document.querySelector('.close-menu');
+
+  burgerMenu.addEventListener('click', function() {
+    nav.classList.toggle('active');
+  });
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', function() {
+      if (nav.classList.contains('active')) {
+        nav.classList.remove('active');
+      }
+    });
+  });
+
+  closeMenuButton.addEventListener('click', function() {
+    if (nav.classList.contains('active')) {
+      nav.classList.remove('active');
+    }
+  });
+
+  document.addEventListener('click', function(event) {
+    if (!nav.contains(event.target) && !burgerMenu.contains(event.target) && nav.classList.contains('active')) {
+      nav.classList.remove('active');
+    }
+  });
+});
+
+
 console.log(`Ваша оценка - 91.5 балла
   Отзыв по пунктам ТЗ:
   Не выполненные/не засчитанные пункты:
