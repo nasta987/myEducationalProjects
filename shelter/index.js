@@ -20,7 +20,11 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   burgerMenu.addEventListener('click', function() {
-    openMenu(); 
+    if (nav.classList.contains('active')) {
+      closeMenu(); 
+    } else {
+      openMenu(); 
+    }
   });
 
   navLinks.forEach(link => {
@@ -39,28 +43,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
   document.addEventListener('click', function(event) {
     if (!nav.contains(event.target) && !burgerMenu.contains(event.target) && nav.classList.contains('active')) {
-      nav.classList.remove('active');
-      burgerMenu.classList.remove('active');
-      overlay.style.display = 'none';
-      document.body.classList.remove('no-scroll');
+      closeMenu();
     }
   });
   
   overlay.addEventListener('click', function() {
-    nav.classList.remove('active');
-      burgerMenu.classList.remove('active');
-      overlay.style.display = 'none';
-      document.body.classList.remove('no-scroll');
+    closeMenu();
   });
 
   nav.addEventListener('click', function(event) {
     if (!event.target.classList.contains('nav-link')) {
-      nav.classList.remove('active');
-      burgerMenu.classList.remove('active');
-      overlay.style.display = 'none';
-      document.body.classList.remove('no-scroll');
+      closeMenu();
     }
   });
+  
 });
 
 
