@@ -6,12 +6,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
   burgerMenu.addEventListener('click', function() {
     nav.classList.toggle('active');
+    burgerMenu.classList.toggle('active');
   });
 
   navLinks.forEach(link => {
     link.addEventListener('click', function() {
       if (nav.classList.contains('active')) {
         nav.classList.remove('active');
+        burgerMenu.classList.remove('active');
       }
     });
   });
@@ -19,14 +21,17 @@ document.addEventListener('DOMContentLoaded', function() {
   closeMenuButton.addEventListener('click', function() {
     if (nav.classList.contains('active')) {
       nav.classList.remove('active');
+      burgerMenu.classList.remove('active');
     }
   });
 
   document.addEventListener('click', function(event) {
     if (!nav.contains(event.target) && !burgerMenu.contains(event.target) && nav.classList.contains('active')) {
       nav.classList.remove('active');
+      burgerMenu.classList.remove('active');
     }
   });
+  
 });
 
 
