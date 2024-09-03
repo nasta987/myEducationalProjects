@@ -52,7 +52,7 @@ html {
 }
 
 body {
-		overflow-x: hidden;
+		overflow: hidden;
 		font-family: Arial;
 		font-size: 15px;
 		font-weight: 400;
@@ -746,12 +746,124 @@ transition: 0.6s;
 	}
 	/* friends end*/
 
+		/* modal-pet start*/
+		.modal-pet {
+    display: none;
+		background: rgb(0,0,0,0.8);
+		position: fixed;
+		width:100%;
+		height: 100%;
+		top: 0;
+    left: 0;
+		justify-content: center;
+		align-items: center;
+		z-index: 1005;
+		}
+		.modal-pet-active {
+			position: absolute;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: flex-end;
+			width: 952px;
+			height: 552px;
+		}
+		.modal-pet-close {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			width: 52px;
+			height: 52px;
+      border-radius: 50%;
+      border: 2px solid #F1CDB3;
+			transform: translateX(40px);
+		}
+		.modal-pet-close:hover {
+			background-color: #fcf8f8;
+			border: 2px solid #e2a980;
+		}
+		.modal-pet-close:active {
+			background-color: #FFFFFF;
+			box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2); 
+			transform: translateY(2px); 
+		}
+		.modal-info-pet {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 900px;
+			height: 500px;
+			background-color: #FAFAFA;
+			border-radius: 10px;
+			padding-right: 20px;
+		}
+		.modal-img-pet img {
+			width: 500px;
+			height: 490px;
+			padding-right: 10px;
+			border-radius: 10px;
+			text-align: center;
+		}
+		.info-pet {
+			width: 400px;
+			justify-content: flex-start;
+			align-items: center;
+		}
+		.pet-name {
+			padding-bottom: 10px;
+			font-weight: bold;
+      font-family: Georgia;
+			font-size: 35px;
+			font-weight: 400;
+			line-height: 45.5px;
+			letter-spacing: 0.06em;
+			text-align: left;
+		}
+		.pet-type-breed {
+			padding-bottom: 40px;
+      font-family: Georgia;
+      font-size: 20px;
+			font-weight: 400;
+			line-height: 23px;
+			letter-spacing: 0.06em;
+			text-align: left;
+		}
+		.pet-description-modal, .pet-age, .pet-inoculations, .pet-diseases, .pet-parasites {
+			font-family: Georgia;
+			font-size: 15px;
+			font-weight: 400;
+			line-height: 16.5px;
+			letter-spacing: 0.06em;
+			text-align: justify;
+		}
+		.pet-age strong, .pet-inoculations strong, .pet-diseases strong, .pet-parasites strong  {
+			font-weight: bold;
+		}
+		.pet-description-modal {
+			padding-bottom: 40px;
+		}
+		.pet-age, .pet-inoculations, .pet-diseases, .pet-parasites {
+			padding-bottom: 10px;
+		}
+		html.no-scroll {
+			overflow: hidden;
+	}
+	.list-dot::before {
+		content: '•'; 
+		color: #F1CDB3;; 
+		padding-right: 1%; 
+	}
+	
+		
+		/* modal-pet end*/
+
 	/* media 1165px header start*/
 	@media screen and (max-width: 1165px) {
 		.nav-list {
 			gap: 30px;
 			flex-wrap: nowrap;
-			
+			padding-left: 35%;
 		}
 		.container-header {
 			gap: 81px;
@@ -909,7 +1021,7 @@ transition: 0.6s;
 		display: flex;
 		justify-content: center;
 		width: 100%;
-		height: 639px;
+		max-height: 639px;
 		margin: 0 auto;
 		padding-bottom: 10%;
 	}
@@ -1008,9 +1120,7 @@ transition: 0.6s;
 		height: 21px;
 		display: flex;
 		position: absolute;
-		left: 85%;
-	
-			
+		left: 85%;			
 }
   .nav-list {
     flex-direction: column;
@@ -1044,13 +1154,89 @@ transition: 0.6s;
 }
 .no-scroll {
 	overflow: hidden; 
+  position: fixed;
+  width: 100%;
 }
 }
+
+/* media from 1102px header start*/
+@media screen and (max-width: 1102px) {
+	.nav-list {
+		gap: 30px;
+		flex-wrap: nowrap;
+		padding-left: 25%;
+	}
+}
+@media screen and (max-width: 957px) {
+	.nav-list {
+		gap: 30px;
+		flex-wrap: nowrap;
+		padding-left: 20%;
+	}
+}
+@media screen and (max-width: 900px) {
+	.nav-list {
+		gap: 30px;
+		flex-wrap: nowrap;
+		padding-left: 15%;
+	}
+}
+@media screen and (max-width: 848px) {
+	.nav-list {
+		gap: 30px;
+		flex-wrap: nowrap;
+		padding-left: 10%;
+	}
+}
+@media screen and (max-width: 815px) {
+	.nav-list {
+		gap: 30px;
+		flex-wrap: nowrap;
+		padding-left: 5%;
+	}
+}
+@media screen and (max-width: 815px) {
+	.nav-list {
+		gap: 20px;
+		flex-wrap: nowrap;
+	}
+}
+/* media from 1102px header end*/
+
+	/* media 1165px modal start*/
+	@media screen and (max-width: 1165px) {
+		.modal-pet-active {
+			width: 682px;
+			height: 402px;
+		}
+		.modal-info-pet {
+			width: 630px;
+			height: 350px;
+			padding-right: 9px;
+		}
+		.modal-img-pet img {
+			width: 340px;
+			height: 340px;
+		}
+		.info-pet {
+			width: 260px;
+			padding-right: 9px;
+		}
+		.pet-description-modal {
+			padding-bottom: 20px;
+		}
+		.pet-type-breed {
+			padding-bottom: 20px;
+		}
+		.pet-age, .pet-inoculations, .pet-diseases, .pet-parasites {
+			padding-bottom: 5px;
+		}
+	}
+	/* media 1165px modal end*/
 
 /* media 768 header start*/
 @media screen and (max-width: 768px) {
 	.container-header {
-		
 		padding-left: 7%;
 	}
 	.logo-title {
@@ -1059,7 +1245,6 @@ transition: 0.6s;
 	.header-logo {
 		gap: 20px;
 	}
-
 /* media 768 header end*/
 
 /* media 768 start-page start*/
@@ -1414,6 +1599,55 @@ text-align: justify;
 }
 }
 /* media 768 friend end */
+
+/* media 768x modal start*/
+@media screen and (max-width: 768px) {
+	.modal-pet-active {
+		width: 270px;
+		height: 393px;
+	}
+	.modal-info-pet {
+		width: 240px;
+		height: 341px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		padding-right: 10px;
+		padding-left: 10px;
+		justify-content: center;
+	}
+	.modal-img-pet img {
+		display: none;
+	}
+	.info-pet {
+		width: 220px;
+		padding-right: 0px;
+	}
+	.pet-description-modal {
+		padding-bottom: 20px;
+		font-family: Georgia;
+		font-size: 12px;
+		font-weight: 400;
+		line-height: 14.3px;
+		letter-spacing: 0.06em;
+		text-align: justify;
+	}
+	.pet-type-breed {
+		padding-bottom: 10px;
+	}
+	.pet-age, .pet-inoculations, .pet-diseases, .pet-parasites {
+		padding-bottom: 5px;
+	}
+	.pet-name, pet-description-modal {
+text-align: center;
+	}
+	.pet-type-breed {
+		font-size: 18px;
+	}
+	.pet-description-modal, .pet-age, .pet-inoculations, .pet-diseases, .pet-parasites {
+		font-size: 13px;
+	}
+}
+/* media 1165px modal end*/
 
 @media screen and (max-width: 375px) {
 	.container-our-friends-row {

@@ -1,9 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
+  // Бургер-меню
   const burgerMenu = document.querySelector('.burger-menu');
   const nav = document.querySelector('.header-nav');
   const navLinks = document.querySelectorAll('.nav-link');
   const closeMenuButton = document.querySelector('.close-menu');
-  const overlay = document.querySelector('.overlay');
+  const overlay = document.querySelector('.overlay'); //затемненный фон для бургер-меню
 
   function openMenu() {
     nav.classList.toggle('active');
@@ -56,7 +57,57 @@ document.addEventListener('DOMContentLoaded', function() {
       closeMenu();
     }
   });
-  
+
+  // Модальное окно
+  const modal = document.querySelector(".modal-pet");
+  const modalClose = document.querySelector(".modal-pet-close");
+  const modalImg = document.querySelector(".modal-img");
+  const petName = document.querySelector(".pet-name");
+  const petDescription = document.querySelector(".pet-description-modal");
+  const petTypeBreed = document.querySelector(".pet-type-breed");
+  const petAge = document.querySelector(".pet-age");
+  const petInoculations = document.querySelector(".pet-inoculations");
+  const petDiseases = document.querySelector(".pet-diseases");
+  const petParasites = document.querySelector(".pet-parasites");
+  const modalPets = document.querySelectorAll(".pet-description");
+
+
+  function openModal(pet) {
+    modal.style.display = 'flex';
+    document.documentElement.classList.add('no-scroll');
+    modalImg.src = pet.img;
+    petName.textContent = pet.name;
+    petTypeBreed.textContent = `${pet.type} - ${pet.breed}`;
+    petDescription.textContent = pet.description;
+    petAge.innerHTML = `<strong class="list-dot">Age:</strong> ${pet.age}`;
+    petInoculations.innerHTML = `<strong class="list-dot">Inoculations:</strong> ${pet.inoculations.join(', ')}`;
+    petDiseases.innerHTML = `<strong class="list-dot">Diseases:</strong> ${pet.diseases.join(', ')}`;
+    petParasites.innerHTML = `<strong class="list-dot">Parasites:</strong> ${pet.parasites.join(', ')}`;
+  }
+
+  function closeModal() {
+    modal.style.display = 'none';
+    document.documentElement.classList.remove('no-scroll'); 
+  }
+
+  modalPets.forEach(petElem => {
+    petElem.addEventListener('click', function(event) {
+      event.preventDefault(); // Останавливает переход по ссылке или отправку формы !!! (Не открывалось модал.окно при клике на фото, кнопку питомца)
+      const petNameText = this.querySelector('.name-pet').textContent;
+      const pet = petObj.find(p => p.name === petNameText);
+      if (pet) {
+        openModal(pet);
+      }
+    });
+  });
+
+  window.addEventListener('click', function(event) {
+    if (event.target === modal) {
+      closeModal();
+    }
+  });
+
+  modalClose.addEventListener('click', closeModal);
 });
 
 
