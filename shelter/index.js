@@ -75,7 +75,12 @@ document.addEventListener('DOMContentLoaded', function() {
   function openModal(pet) {
     modal.style.display = 'flex';
     document.documentElement.classList.add('no-scroll');
-    modalImg.src = pet.img;
+    // !!! Прописаниие путей к картинка в модальном окне!!!
+     // Определить, на какой странице находится пользователь
+     const isIndexPage = window.location.pathname.endsWith('index.html');
+     // Если на главной странице, добавить 'shelter/' перед путем к картинке
+    const imagePathPrefix = isIndexPage ? 'shelter/' : './';
+    modalImg.src = imagePathPrefix + pet.img;
     petName.textContent = pet.name;
     petTypeBreed.textContent = `${pet.type} - ${pet.breed}`;
     petDescription.textContent = pet.description;
