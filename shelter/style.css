@@ -1697,11 +1697,14 @@ text-align: center;
 	body {
 			font-family: 'San Francisco', 'Helvetica Neue', 'Georgia', sans-serif;
 	}
+	.button-pet-description, .arrow {
+		color: #292929;
+	}
 }
 /* Для Android устройств */
 @media screen and (min-device-width: 320px) and (max-device-width: 800px) and (-webkit-min-device-pixel-ratio: 1.5) {
 	body {
-			font-family: Roboto, Arial, sans-serif; /* Roboto для Android, Arial как резерв */
+			font-family: Roboto, Arial, sans-serif; 
 	}
 }
 
@@ -1710,14 +1713,14 @@ text-align: center;
 /* Для устройств на Linux */
 @media screen and (-moz-device-pixel-ratio: 1) {
 	body {
-			font-family: 'Liberation Sans', 'DejaVu Sans', Arial, sans-serif; /* Liberation Sans и DejaVu Sans для Linux, Arial как резерв */
+			font-family: 'Liberation Sans', 'DejaVu Sans', Arial, sans-serif;
 	}
 }
 
 /* Для больших экранов (например, ноутбуки) */
 @media screen and (min-width: 300px) {
 	body {
-			font-family: Arial, Helvetica, sans-serif; /* Arial и Helvetica для больших экранов */
+			font-family: Arial, Helvetica, sans-serif; 
 	}
 }
 /* Animation start*/
