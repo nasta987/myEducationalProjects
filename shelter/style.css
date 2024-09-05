@@ -324,7 +324,7 @@ color:#545454;
 	padding-bottom: 7.6%;
 	text-align: center;
 }
-.container-article-pet-description {
+.container-article-pet-description, .container-article-pet-description-friends {
 	display: flex;
 	justify-content: space-around;
 	align-items:center;
@@ -758,6 +758,7 @@ transition: 0.6s;
 		justify-content: center;
 		align-items: center;
 		z-index: 1005;
+		margin: 0 auto;
 		}
 		.modal-pet-active {
 			position: absolute;
@@ -944,7 +945,7 @@ transition: 0.6s;
 		padding-bottom: 7.6%;
 		text-align: center;
 	}
-	.container-article-pet-description {
+	.container-article-pet-description, .container-article-pet-description-friends {
 		gap: 43px;
 	}
 	.h3-our-friends {
@@ -1013,10 +1014,10 @@ transition: 0.6s;
 	height: 100%;
 }
 }
-/* media 1165p in-addition end */
+/* media 1165px in-addition end */
 
-/* media 1165p footer start */
-@media screen and (max-width: 1165px) {
+/* media 1170px footer start */
+@media screen and (max-width: 1170px) {
 	.footer {
 		display: flex;
 		justify-content: center;
@@ -1054,10 +1055,10 @@ transition: 0.6s;
 		width: 270px;
 	}
 }
-/* media 1165p footer end */
+/* media 1170px footer end */
 
-/* media 1165p friend start */
-@media screen and (max-width: 1165px) {
+/* media 1220px friend start */
+@media screen and (max-width: 1220px) {
 	.friends {
 		padding: 0 15px;
 		padding-top: 6.2%;
@@ -1223,13 +1224,16 @@ transition: 0.6s;
 			padding-right: 9px;
 		}
 		.pet-description-modal {
-			padding-bottom: 20px;
+			padding-bottom: 15px;
+			font-size: 13px;
 		}
 		.pet-type-breed {
-			padding-bottom: 20px;
+			padding-bottom: 15px;
+			font-size: 18px;
 		}
 		.pet-age, .pet-inoculations, .pet-diseases, .pet-parasites {
 			padding-bottom: 5px;
+			font-size: 14px;
 		}
 	}
 	/* media 1165px modal end*/
@@ -1513,26 +1517,22 @@ text-align: justify;
 		display: flex;
 		justify-content: center;
 		width: 100%;
-		height: auto;
 		margin: 0 auto;
-		padding-bottom: 0px;
+		padding-bottom: 0%;
 	}
 	.container-footer {
 		display: flex;
-		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		gap:35px;
+		gap:15px;
 		padding-top: 30px;
 		flex-wrap: wrap;
 		height: auto;
 	}
-	.footer-dog {
-		transform: translateY(-15px);
-	}
+
 	.footer-dog-img img {
-		width:260px;
-		height:269px;
+		width:100%;
+		height:100%;
 	}
 	.h3-title-questions, .h3-title-visit {
    font-family: Georgia;
@@ -1545,10 +1545,12 @@ text-align: justify;
 	.for-questions, .visit-contacts {
 		justify-content: center;
 		align-items: center;
+		gap: 10px;
 	}
 	.visit-contacts {
 		gap: 20px;
 	}
+	
 }
 /* media 768 footer end */
 
@@ -1668,3 +1670,56 @@ text-align: center;
 }
 }
 /* media 440 start-page end*/
+
+@media screen and (max-width: 974px) {
+	.footer {
+		height: 639px;
+	}
+}
+@media screen and (max-width: 768px) {
+	.footer {
+		height: 823px;
+	}
+}
+@media screen and (max-width: 600px) {
+	.footer {
+		height: 1300px;
+	}
+}
+
+.container-article-pet-description-friends {
+	justify-content: center;
+	align-items: center;
+}
+
+/* Для iOS-устройств */
+@media screen and (-webkit-min-device-pixel-ratio: 1) {
+	body {
+			font-family: 'San Francisco', 'Helvetica Neue', 'Georgia', sans-serif;
+	}
+}
+/* Для Android устройств */
+@media screen and (min-device-width: 320px) and (max-device-width: 800px) and (-webkit-min-device-pixel-ratio: 1.5) {
+	body {
+			font-family: Roboto, Arial, sans-serif; /* Roboto для Android, Arial как резерв */
+	}
+}
+
+/* Шрифты*/
+
+/* Для устройств на Linux */
+@media screen and (-moz-device-pixel-ratio: 1) {
+	body {
+			font-family: 'Liberation Sans', 'DejaVu Sans', Arial, sans-serif; /* Liberation Sans и DejaVu Sans для Linux, Arial как резерв */
+	}
+}
+
+/* Для больших экранов (например, ноутбуки) */
+@media screen and (min-width: 300px) {
+	body {
+			font-family: Arial, Helvetica, sans-serif; /* Arial и Helvetica для больших экранов */
+	}
+}
+/* Animation start*/
+
+/* Animation end*/

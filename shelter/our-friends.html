@@ -107,12 +107,13 @@
         </div>
       </div>
       <div class="container-buttons-arrow">
-        <button class="arrow" disabled>&#60;&#60;</button>
-        <button class="arrow" disabled>&#60;</button>
-        <button class="arrow activ-button">1</button>
-        <button class="arrow">&#62;</button>
-        <button class="arrow">&#62;&#62;</button>
-       </div>
+        <button id="firstPageBtn" class="arrow">&#60;&#60;</button>
+        <button id="prevPageBtn" class="arrow prev">&#60;</button>
+        <button id="currentPageBtn" class="arrow activ-button">1</button>
+        <button id="nextPageBtn" class="arrow next-friend">&#62;</button>
+        <button id="lastPageBtn" class="arrow">&#62;&#62;</button>
+    </div>
+    <div id="cards-container" class="cards-container"></div>
     </div>
     <div class="modal-pet">
       <div class="modal-pet-active">
@@ -137,7 +138,7 @@
       </div>
         </section>
   </main>
-  <footer class="footer" id="contacts">
+  <footer class="footer tablets" id="contacts">
     <div class="container-footer">
       <article class="for-questions">
         <h3 class="h3-title-questions">For questions <br> and suggestions</h3>
@@ -177,8 +178,10 @@
     </div>
   </footer>
 </div>
+
 <script defer src="data.js"></script>
-<script defer src="index.js"></script> 
+
+<script defer src ="indexFriend.js"></script>
 <div class="overlay"></div>
 </body>
 </html>
