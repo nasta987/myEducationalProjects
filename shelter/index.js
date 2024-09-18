@@ -141,6 +141,16 @@ function renderPets() {
 
   petElements.forEach((petElement, index) => { //заменяем каждую карточку на странице новой выборочной карточкой
       const pet = petObj[(currentIndex + index) % petObj.length]; // Получаем текущий объект животного
+
+   
+
+      // Добавляем Класс для анимации исчезновения
+  petElement.classList.add('fade-out');
+  
+  petElement.addEventListener('animationend', function handleFadeOut() {
+    petElement.classList.remove('fade-out');
+    petElement.removeEventListener('animationend', handleFadeOut);
+
           petElement.innerHTML = `                      
               <a href="" class="screen-pet-our-friends">
                 <img src="${imagePathPrefix + pet.img}" alt="Pet ${pet.name}">
@@ -152,12 +162,24 @@ function renderPets() {
               <div class="spacer"></div>
           `;
 
+          // Добавляем класс для анимации появления
+    petElement.classList.add('fade-in');
+
+    // Удаляем класс после завершения анимации появления
+    petElement.addEventListener('animationend', function handleFadeIn() {
+      petElement.classList.remove('fade-in');
+      petElement.removeEventListener('animationend', handleFadeIn);
+      
+    });
+
           // Обработчик клика на карточку для открытия модального окна
           petElement.addEventListener('click', function(event) {
               event.preventDefault(); // Предотвращаем действие по умолчанию, чтобы не было перехода по ссылкам в html
               openModal(pet);
           });
   });
+});
+
 }
 
 // Функция для обработки нажатия на стрелку вперед

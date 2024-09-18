@@ -148,6 +148,12 @@ function renderPets() {
 
     petElements.forEach((petElement, index) => {
         const pet = petObj[(startIndex + index) % petObj.length];
+        // Добавляем Класс для анимации исчезновения
+  petElement.classList.add('fade-out');
+  
+  petElement.addEventListener('animationend', function handleFadeOut() {
+    petElement.classList.remove('fade-out');
+    petElement.removeEventListener('animationend', handleFadeOut);
         petElement.innerHTML = `
             <a href="" class="screen-pet-our-friends">
                 <img src="${pet.img}" alt="Pet ${pet.name}">
@@ -159,14 +165,25 @@ function renderPets() {
             <div class="spacer"></div>
         `;
 
+          // Добавляем класс для анимации появления
+    petElement.classList.add('fade-in');
+
+    // Удаляем класс после завершения анимации появления
+    petElement.addEventListener('animationend', function handleFadeIn() {
+      petElement.classList.remove('fade-in');
+      petElement.removeEventListener('animationend', handleFadeIn);
+      
+    });
+
         petElement.addEventListener('click', function(event) { // Открытие модального окна
             event.preventDefault();
             openModal(pet);
         });
     });
+  });
     updatePageNumber();  // Обновляем номер страницы
     updatePaginationButtons(); // Обновляем состояние кнопок пагинации
-}
+}    
 
 // Переход на первую страницу
 function firstPage() {
