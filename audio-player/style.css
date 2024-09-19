@@ -139,26 +139,14 @@ table {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 97%;
-  height: 97%;
-  border: 4px solid rgb(249, 245, 26);
-  border-radius: 20px;
+  width: 100%;
+  height: 100%;
   box-shadow: -1px 1px 10px rgba(0, 0, 0, 0.92);
   background: no-repeat center center;
   background-size: cover;
   overflow: hidden;
 }
-.container-audio::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  filter: blur(20px);
-  z-index: -1;
-}
+
 .audio-player {
   display: flex;
   flex-direction: column;
@@ -166,7 +154,6 @@ table {
   align-items: center;
   width: 300px;
   height: 500px;
-  border: 2px solid green;
   border-radius: 20px;
   box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.66);
   background-color: rgb(173, 172, 172);
@@ -177,7 +164,6 @@ audio {
   align-items: center;
   width: 100%;
   height: 10%;
-  border: 2px solid red;
   background-color: rgb(173, 172, 172);
 }
 
@@ -186,8 +172,9 @@ button {
   border: none; /* Не стилизовать рамку */
   padding: 0; /* Без внутренних отступов */
   background: none; /* Фон прозрачный */
-  filter: invert(1) brightness(2); /*Изменить цвет фото кнопок */
+  filter: invert(1) brightness(1) opacity(0.8); /*Изменить цвет фото кнопок */
 }
+
 .play-btn {
   width: 80px;
   height: 80px;
@@ -212,10 +199,10 @@ button {
   background-image: url("assets/icons/pause.png");
   background-size: cover;
 }
-.image-button:hover {
-  opacity: 0.8;
+button:hover {
+  filter: invert(1) brightness(1) opacity(1);
 }
-.image-button:active {
+button:active {
   transform: scale(0.95);
 }
 /*Кнопки конец*/
@@ -227,9 +214,23 @@ button {
   align-items: center;
   width: 100%;
   height: 65%;
-  border: 2px solid blue;
   background: no-repeat;
   background-size: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  overflow: hidden; /* Скрыть выходящее за границы содержимое при увеличении фото при нажатии на паузу */
+  transition: background-size 0.5s ease;
+}
+.audio-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.audio-background.zoomed {
+  background-size: 130%; /* Увеличение фона */
+  background-position: center; /* Увеличение фона по центру */
 }
 .rewind-btn {
   display: flex;
@@ -263,3 +264,36 @@ button {
   color: rgb(165, 229, 70);
 }
 /*Названия конец*/
+
+/*Полоска, ползунок от аудио плейера начало*/
+.progress-container {
+  display: flex;
+  align-items: center;
+  width: 70%;
+  padding-bottom: 10%;
+}
+.progress-bar {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 80%;
+  margin: 0 10px;
+  background: black;
+  height: 5px; /* Высота полоски прогресса */
+  border-radius: 5px;
+  outline: none; /* Убрать обводку */
+}
+.progress-bar::-webkit-slider-thumb {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 10px;
+  height: 10px;
+  background: rgb(165, 229, 70);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.time {
+  display: flex;
+  justify-content: space-between;
+  width: 20%;
+}
+/*Полоска, ползунок от аудио плейера конец*/

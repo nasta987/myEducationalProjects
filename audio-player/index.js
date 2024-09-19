@@ -7,6 +7,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const audioBackground = document.querySelector(".audio-background");
   const singer = document.querySelector(".singer");
   const song = document.querySelector(".song");
+  const progressBar = document.querySelector(".progress-bar");
+  const currentTimeEl = document.querySelector(".current-time");
+  const durationEl = document.querySelector(".duration");
 
   let currentIndex = 0;
 
@@ -15,9 +18,11 @@ document.addEventListener("DOMContentLoaded", function () {
     if (audio.paused) {
       audio.play();
       playBtn.classList.add("pause-btn");
+      audioBackground.classList.add("zoomed");
     } else {
       audio.pause();
       playBtn.classList.remove("pause-btn");
+      audioBackground.classList.remove("zoomed");
     }
   }
 
@@ -31,21 +36,47 @@ document.addEventListener("DOMContentLoaded", function () {
     audioBackground.style.backgroundImage = `url(${track.pathBackground})`;
     singer.textContent = track.artist;
     song.textContent = track.nameSong;
-    audio.play();
   }
 
   function nextTrack() {
     currentIndex = (currentIndex + 1) % arrayAudio.length;
     loadTrack(currentIndex);
+    audio.play();
+    playBtn.classList.add("pause-btn");
+    audioBackground.classList.add("zoomed");
   }
 
   function prevTrack() {
     currentIndex = (currentIndex - 1 + arrayAudio.length) % arrayAudio.length;
     loadTrack(currentIndex);
+    audio.play();
+    playBtn.classList.add("pause-btn");
+    audioBackground.classList.add("zoomed");
   }
   forwardBtn.addEventListener("click", nextTrack);
   backwardBtn.addEventListener("click", prevTrack);
 
   // При загрузке страницы - первая песня
   loadTrack(currentIndex);
+
+  // Прогресс-бар
+  function formatTime(seconds) {
+    const minutes = Math.floor(seconds / 60);
+    const secs = Math.floor(seconds % 60);
+    return `${minutes}:${secs < 10 ? "0" : ""}${secs}`;
+  }
+
+  audio.addEventListener("loadedmetadata", function () {
+    progressBar.max = audio.duration;
+    durationEl.textContent = formatTime(audio.duration);
+  });
+
+  audio.addEventListener("timeupdate", function () {
+    progressBar.value = audio.currentTime;
+    currentTimeEl.textContent = formatTime(audio.currentTime);
+  });
+
+  progressBar.addEventListener("input", function () {
+    audio.currentTime = progressBar.value;
+  });
 });

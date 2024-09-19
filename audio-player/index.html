@@ -13,8 +13,6 @@
     <main>
       <div class="container-main">
         <div class="container-audio">
-          <div class="background-blur"></div>
-          <!-- Новый элемент для размытого фона -->
           <div class="audio-player">
             <div class="audio-background"></div>
             <div class="audio-control">
@@ -28,7 +26,14 @@
                 <button class="backward-btn"></button>
               </div>
             </div>
-            <audio controls src="assets/audio/beyonce.mp3"></audio>
+            <div class="progress-container">
+              <input type="range" class="progress-bar" value="0" max="100" />
+              <div class="time">
+                <span class="current-time">0:00</span> /
+                <span class="duration">0:00</span>
+              </div>
+            </div>
+            <audio src="assets/audio/beyonce.mp3"></audio>
           </div>
         </div>
       </div>
