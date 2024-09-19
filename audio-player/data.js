@@ -3,12 +3,12 @@ let arraySong = [
     artist: "Beyonce",
     nameSong: "Dont Hurt Yourself",
     pathSong: "assets/audio/beyonce.mp3",
-    pathBackground: "/assets/image/dontstartnow.png",
+    pathBackground: "/assets/image/lemonade.png",
   },
   {
-    artist: "Beyonce",
-    nameSong: "Dont Hurt Yourself",
-    pathSong: "assets/audio/beyonce.mp3",
+    artist: "Dua Lipa",
+    nameSong: "Dont Start Now",
+    pathSong: "assets/audio/dontstartnow.mp3",
     pathBackground: "/assets/image/dontstartnow.png",
   },
 ];
