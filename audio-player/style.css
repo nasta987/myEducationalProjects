@@ -1,0 +1,299 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+/*Start*/
+.container-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(27, 22, 22);
+}
+.container-audio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  box-shadow: -1px 1px 10px rgba(0, 0, 0, 0.92);
+  background: no-repeat center center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.audio-player {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
+  height: 500px;
+  border-radius: 20px;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.66);
+  background-color: rgb(173, 172, 172);
+}
+audio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 10%;
+  background-color: rgb(173, 172, 172);
+}
+
+/*Кнопки старт*/
+button {
+  border: none; /* Не стилизовать рамку */
+  padding: 0; /* Без внутренних отступов */
+  background: none; /* Фон прозрачный */
+  filter: invert(1) brightness(1) opacity(0.8); /*Изменить цвет фото кнопок */
+}
+
+.play-btn {
+  width: 80px;
+  height: 80px;
+  background-image: url("assets/icons/play.png");
+  background-size: cover;
+}
+.forward-btn {
+  width: 50px;
+  height: 50px;
+  background-image: url("assets/icons/forward.png");
+  background-size: cover;
+}
+.backward-btn {
+  width: 50px;
+  height: 50px;
+  background-image: url("assets/icons/backward.png");
+  background-size: cover;
+}
+.pause-btn {
+  width: 80px;
+  height: 80px;
+  background-image: url("assets/icons/pause.png");
+  background-size: cover;
+}
+button:hover {
+  filter: invert(1) brightness(1) opacity(1);
+}
+button:active {
+  transform: scale(0.95);
+}
+/*Кнопки конец*/
+
+.audio-background {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 65%;
+  background: no-repeat;
+  background-size: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  overflow: hidden; /* Скрыть выходящее за границы содержимое при увеличении фото при нажатии на паузу */
+  transition: background-size 0.5s ease;
+}
+.audio-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.audio-background.zoomed {
+  background-size: 130%; /* Увеличение фона */
+  background-position: center; /* Увеличение фона по центру */
+}
+.rewind-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.audio-control {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(173, 172, 172);
+}
+.music-characteristic {
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+/*Названия старт*/
+.song {
+  font-size: larger;
+  color: rgb(255, 251, 251);
+}
+.singer {
+  font-size: larger;
+  font-weight: bold;
+  color: rgb(165, 229, 70);
+}
+/*Названия конец*/
+
+/*Полоска, ползунок от аудио плейера начало*/
+.progress-container {
+  display: flex;
+  align-items: center;
+  width: 70%;
+  padding-bottom: 10%;
+}
+.progress-bar {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 80%;
+  margin: 0 10px;
+  background: black;
+  height: 5px; /* Высота полоски прогресса */
+  border-radius: 5px;
+  outline: none; /* Убрать обводку */
+}
+.progress-bar::-webkit-slider-thumb {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 10px;
+  height: 10px;
+  background: rgb(165, 229, 70);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.time {
+  display: flex;
+  justify-content: space-between;
+  width: 20%;
+}
+/*Полоска, ползунок от аудио плейера конец*/
