@@ -79,4 +79,6 @@ document.addEventListener("DOMContentLoaded", function () {
   progressBar.addEventListener("input", function () {
     audio.currentTime = progressBar.value;
   });
+
+  audio.addEventListener("ended", nextTrack);
 });
