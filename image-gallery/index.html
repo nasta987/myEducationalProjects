@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="assets/icon-image.png" />
+    <link rel="icon" href="assets/icon-camera.png" />
     <title>Image-gallery</title>
   </head>
   <body>
@@ -19,8 +19,21 @@
           </div>
 
           <div class="container-input">
-            <input class="input" type="text" placeholder="Search..." />
-            <button id="search-btn">Поиск</button>
+            <div class="input-wrapper">
+              <input
+                class="input"
+                id="search-input"
+                type="text"
+                placeholder="Search..."
+              />
+              <button id="search-btn">
+                <img
+                  src="./assets/icon-lupa.png"
+                  alt="Search"
+                  class="search-icon"
+                />
+              </button>
+            </div>
           </div>
         </div>
       </div>
