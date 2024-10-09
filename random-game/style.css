@@ -158,6 +158,24 @@ table {
   background-color: white;
   display: block;
   border-radius: 20px;
+  transform: rotateY(
+    0deg
+  ); /* начальное состояние карты - карточки лицом вверх*/
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+  cursor: pointer;
+}
+.memory-card.flip {
+  transform: rotateY(180deg); /* поворот при клике */
+}
+
+.front-face,
+.back-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  backface-visibility: hidden; /* скрывает обратную сторону при перевороте */
 }
 .front-face {
   width: 150px;
@@ -165,9 +183,13 @@ table {
   border-radius: 20px;
 }
 .back-face {
-  display: none;
   width: 150px;
   height: 150px;
   border-radius: 20px;
+}
+.back-face {
+  transform: rotateY(
+    180deg
+  ); /* делает обратную сторону невидимой по умолчанию */
 }
 /* End card*/
