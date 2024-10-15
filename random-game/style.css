@@ -406,26 +406,26 @@ table {
   }
 }
 
-/* Ландшафтная ориентация */
-@media (orientation: landscape) {
+/* Ландшафтная ориентация при максимальной высоте экрана 800px */
+@media (orientation: landscape) and (max-height: 450px) {
   .memory-card {
     width: 75px;
     height: 75px;
   }
   .memory-game {
-    gap: 15px;
+    gap: 10px;
   }
   #reset-button {
-    font-size: 14px;
-    width: 160px;
-    height: 70px;
+    font-size: 12px;
+    width: 140px;
+    height: 60px;
   }
   .results h2 {
-    font-size: 16px;
+    font-size: 14px;
   }
   .results {
-    margin-top: 10px;
+    margin-top: 5px;
     margin: 0px auto;
-    padding: 15px 15px;
+    padding: 10px 10px;
   }
 }
